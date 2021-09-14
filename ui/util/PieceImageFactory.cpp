@@ -2,9 +2,10 @@
 // Created by Passos, Arthur on 24/11/20.
 //
 
-#include <iostream>
+#include <filesystem>
 #include "PieceImageFactory.h"
 #include "../../lib/magic_enum.h"
+namespace fs = std::filesystem;
 
 std::unordered_map<std::string, QPixmap> PieceImageFactory::cache;
 
@@ -29,5 +30,5 @@ QPixmap PieceImageFactory::create(std::shared_ptr<pieces::IPiece> piece) {
 }
 
 std::string PieceImageFactory::prefix() {
-    return "/Users/pssrth/CLionProjects/Chess1/resources/images/";
+    return fs::current_path().generic_string() + "/../resources/images/";
 }
