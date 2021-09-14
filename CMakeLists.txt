@@ -7,7 +7,7 @@ add_library(range_v3 INTERFACE IMPORTED)
 set_target_properties(range_v3 PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES $ENV{HOME}/range-v3/include)
 
-set (CMAKE_PREFIX_PATH ~/Qt/5.15.2/clang_64/)
+set (CMAKE_PREFIX_PATH /usr/local/Cellar/qt@5/5.15.2)
 
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Multimedia REQUIRED)
